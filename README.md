@@ -24,9 +24,8 @@
 
 # Useful Websites
 
-{Make a list of websites that you found helpful in this project}
-* [Web Site Name](http://url.link.goes.here)
-* [Web Site Name](http://url.link.goes.here)
+* [How to Get Started with Firebase Using Python](https://www.freecodecamp.org/news/how-to-get-started-with-firebase-using-python/)
+* [How to Obtain Your Firebase (Data) Url?](https://www.appypie.com/faqs/how-to-obtain-your-firebase-data-url)
 
 # Future Work
 
