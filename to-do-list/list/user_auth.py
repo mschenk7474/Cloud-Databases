@@ -35,6 +35,7 @@ class User_Authentication():
         # opening prompt and input
         print("Do you have an account (Y/N)?")
         choice = input("> ")
+        print()
 
         # makes the user's choice upper just in case they enter a lowercase y or n
         choice.upper()
@@ -104,7 +105,7 @@ class User_Authentication():
 
         # sets a new user up in the database
         ref = db.reference("/Users")
-        ref = ref.child("Users").child(f"{name}").child(f"{password}")
+        ref = ref.child(f"{name}").child(f"{password}")
         ref.set(name)
         ref.set(password)
 
