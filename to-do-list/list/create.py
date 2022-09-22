@@ -3,7 +3,7 @@ Create: The class where we will br creating lists and points and sending them to
 """
 
 # class declaration
-from search import Search
+from list.search import Search
 
 class Create():
     """

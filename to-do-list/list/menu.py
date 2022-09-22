@@ -4,10 +4,10 @@ menu with the options that coorelates to the specific classes needed.
 """
 
 # class calls
-from create import Create
-from delete import Delete
-from modify import Modify
-from search import Search
+from list.create import Create
+from list.delete import Delete
+from list.modify import Modify
+from list.search import Search
 
 class Menu():
     """
@@ -38,7 +38,8 @@ class Menu():
             print("3. Modify")
             print("4. Delete")
             print("5. Quit")
-            choice = input("Enter number here > ")
+            choice = int(input("Enter number here > "))
+            print()
 
             # actual choices using if's
             # create choice

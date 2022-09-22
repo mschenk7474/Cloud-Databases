@@ -3,7 +3,7 @@ Delete: The class where we will be deleting points and lists.
 """
 
 # class declaration
-from search import Search
+from list.search import Search
 
 class Delete():
     """

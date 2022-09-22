@@ -5,7 +5,6 @@ Main file: where everthing is compiled and ran from
 # class calls
 from list.user_auth import User_Authentication
 from list.menu import Menu
-
 def main():
     """
     This is the main function, where everything is ran from. Only classes needed here are the menu and 
@@ -15,7 +14,7 @@ def main():
 
     # calls to authenticate the user (will pass the reference for the menu to use later on in the functionality)
     credentials = User_Authentication.credentials_prompt()
-
+    
     #calls the menu (will get passed the credentials, nothing in it right now)
     Menu.menu(credentials)
 

@@ -2,7 +2,7 @@
 Modify: Where we will be modifying certain points and lists.
 """
 # class declarations
-from search import Search
+from list.search import Search
 
 class Modify():
     """
