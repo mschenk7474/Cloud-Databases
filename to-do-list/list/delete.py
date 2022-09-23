@@ -1,4 +1,6 @@
 """
+Created by Mason Schenk
+
 Delete: The class where we will be deleting points and lists.
 """
 

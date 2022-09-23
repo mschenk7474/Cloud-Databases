@@ -1,4 +1,6 @@
 """
+Created by Mason Schenk
+
 Menu: Where we will have all the options come from. Will have a 
 menu with the options that coorelates to the specific classes needed.
 """

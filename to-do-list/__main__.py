@@ -1,4 +1,6 @@
 """
+Created by Mason Schenk
+
 Main file: where everthing is compiled and ran from
 """
 
