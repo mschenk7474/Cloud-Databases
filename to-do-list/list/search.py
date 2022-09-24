@@ -5,6 +5,12 @@ Search: Where we wil be able to search for items in our
 databases, whether that be items of lists or lists themselves.
 """
 
+# all of the imports needed with the objects created for the connection to the database
+import firebase_admin
+import json
+from firebase_admin import db
+
+
 class Search():
     """
     Search will be used by most other classes, but it's main goal is to search our database for
@@ -18,14 +24,38 @@ class Search():
         """
         Where we will intialize all the public variables to be used throughout the class.
         """
-        pass
+        self.ref = db.reference("/Users")
 
-    def type_to_search(self):
+    def type_to_search(self, r):
         """
         Where we will narrow down what type of search we will be doing, and direct the efforts
         in the correct direction.
         """
-        pass
+        # class instance declaration
+        s = Search()
+
+        # has the ref equal the new reference
+        self.ref = r
+
+        # opening prompt with choices for the user to choose from
+        print("What type of data would you like to search for? (Choose a number that corresponds to the options below)")
+        print("1. An item of a list")
+        print("2. A list")
+        choice = int(input("> "))
+        print()
+
+        # handles case where the user wants to search for an item from a list
+        if choice == 1:
+            s.item_input()
+        
+        # handles case where the user wants to search for a list
+        elif choice == 2:
+            s.list_input()
+        
+        # handles the case where user inuts a number not supported
+        else:
+            print("Invalid choice, please try again.")
+            s.type_to_search()
     
     def item_input(self):
         """
