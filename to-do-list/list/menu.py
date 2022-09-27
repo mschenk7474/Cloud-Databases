@@ -26,6 +26,11 @@ class Menu():
     def menu(self, ref):
 
         # ref is equal to /users/whatever_name_was_inputted
+
+        c = Create()
+        s = Search()
+        m = Modify()
+        d = Delete()
         
         # intializes the choice variable
         done = False
@@ -49,25 +54,21 @@ class Menu():
             # create choice
             if choice == 1:
                 # only has to call this one function with the class instance, everything else is handled within the class
-                c = Create()
                 c.type_to_create(ref)
             
             # search choice
             elif choice == 2:
                 # only has to call this one function with the class instance, everything else is handled within the class
-                s = Search()
                 s.type_to_search(ref)
 
             # modify choice
             elif choice == 3:
                 # only has to call this one function with the class instance, everything else is handled within the class
-                m = Modify()
                 m.type_to_modify(ref)
             
             # delete choice
             elif choice == 4:
                 # only has to call this one function with the class instance, everything else is handled within the class
-                d = Delete()
                 d.type_to_delete(ref)
             
             # quit choice

@@ -5,6 +5,7 @@ User Authentication: Where the user inputs their credientials, and is
 directed to their correct part of the database.
 """
 # all of the imports needed with the objects created for the connection to the database
+from unicodedata import name
 import firebase_admin
 import json
 from firebase_admin import db
@@ -24,6 +25,7 @@ class User_Authentication():
         """
         # credentials to be gathered throughout the program. It is intially set for /Users
         self.creds = db.reference("/Users")
+        self.name = " "
 
     def credentials_prompt(self):
         """
@@ -88,6 +90,7 @@ class User_Authentication():
             # returns the ref to be used in the menu, but only off of the name since we want the
             # password to be it's own entity of the 
             self.creds = db.reference(f"/Users/{name}")
+            self.name = name
 
         # error message with the recall to the prompt
         else:
@@ -159,9 +162,5 @@ class User_Authentication():
             # if name isn't present, return falses
             else:
                 return False
-
     def get_ref(self):
-        """
-        Returns the credentials to be used throughout the program
-        """
-        return self.creds
+        return self.creds         
