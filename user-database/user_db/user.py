@@ -196,6 +196,7 @@ class User():
                 print("User is not found, please try again.")
                 print()
                 ua.credentials_show()
+                return
 
         # call of the menu because we aren't done until the user quits out of the main menu
         ua.menu()
@@ -342,6 +343,7 @@ class User():
         # asks the user to input what they would like to delete
         print("What user would you like to delete? ")
         user_to_delete = input("> ")
+        print()
 
         # declares self.creds to be used later, and declares data to be used by enumerate
         self.creds = db.reference("/Users")
