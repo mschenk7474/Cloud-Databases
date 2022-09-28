@@ -14,24 +14,23 @@ default_app = firebase_admin.initialize_app(cred_obj, {
 	})
 
 # class calls
-from list.user_auth import User_Authentication
-from list.menu import Menu
+from user_db.user import User
 def main():
     """
-    This is the main function, where everything is ran from. Only classes needed here are the menu and 
-    user authentication classes. We need to get the UA from the user, pass that as the reference in the 
-    database to the menu, and then use that when pulling up the user's past entries into the database.
+    This is the main function, where everything is ran from. Only classes needed here is the user class. 
+    We get the intial credentials prompt, and then call the menu within the user class to intialize
+    the program.
     """
     # class instance declarations
-    user = User_Authentication()
-    main_menu = Menu()
+    user = User()
 
     # calls to authenticate the user and gets reference to user throughout the program
     user.credentials_prompt()
-    ref = user.get_ref()
+
+    #calls the menu 
+    user.menu()
     
-    #calls the menu (will get passed the credentials, nothing in it right now)
-    main_menu.menu(ref)
+    
 
 # runs main
 if __name__ == "__main__":
