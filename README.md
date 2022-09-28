@@ -28,8 +28,6 @@
 * [How to Obtain Your Firebase (Data) Url?](https://www.appypie.com/faqs/how-to-obtain-your-firebase-data-url)
 
 # Future Work
-
-{Make a list of things that you need to fix, improve, and add in the future.}
-* Item 1
-* Item 2
-* Item 3
+* When modifying users, check the levels of access the user has, and see if they can make changes or not
+* Adding account classication to each user such as Admin, Normal, and others for the reason above
+* Adding more options to add other things to the accounts, like bank info, id numbers, etc.
