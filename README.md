@@ -4,7 +4,7 @@
 
 {Provide a description of the software that you wrote and how it integrates with a Cloud Database.  Describe how to use your program.}
 
-{Describe your purpose for writing this software.}
+My purpose of writing this software was to gain a better understanding of how to use a cloud database, and how to connect it to somewhere where I can access the database and modify it the way I want. I also wrote this to get my feet wet with cloud programming to hopefully get into bigger cloud programming projects that involve AWS, Azure, and more.
 
 {Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of the cloud database.}
 
