@@ -12,9 +12,9 @@
 
 # Cloud Database
 
-{Describe the cloud database you are using.}
+I am using a Realtime Database that is based on Google Firebase. Within this database, you can integrate it with Python, and use a Python program to create, modify, read, and delete. If you want to know more about how to get started with a Firebase database look for the link titled How to Get Started with Firebase Using Python in the [Useful Websites](#useful-websites) section.
 
-{Describe the structure of the database that you created.}
+In my Realtime Database on Firebase, the data is set up in a table called 'Users'. Inside 'Users', there will be names of users, with their corresponding passwords. That is the structure of the database so far, but I have plans to add more functionality to the program to add more things to the users as time goes on.
 
 # Development Environment
 
