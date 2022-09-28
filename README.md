@@ -18,9 +18,15 @@
 
 # Development Environment
 
-{Describe the tools that you used to develop the software}
+I used Visual Studio Code to develop my software, Firebase Realtime Database to house my cloud database, and GitHub to host the code publicly so all can see the work I have done here on my cloud database.
 
-{Describe the programming language that you used and any libraries.}
+The programming language I used for this project was Python 3.10 and the library I used for this project was firebase admin.
+
+You can download the latest version of Python for your OS [here](https://www.python.org/downloads/), and you can find the installation process for the library in the [Useful Websites](#useful-websites) link titled How to Get Started With Firebase using Python.
+
+You can create a free account for Firebase [here](https://firebase.google.com/). Follow the [Useful Websites](#useful-websites) link mentioned above to get started with doing that.
+
+You can download the latest version of Visual Studio Code for your OS [here](https://code.visualstudio.com/Download) and can find the GitHub main website [here](https://github.com/). Feel free to create an account and fork the repo if you would like!
 
 # Useful Websites
 
@@ -29,5 +35,5 @@
 
 # Future Work
 * When modifying users, check the levels of access the user has, and see if they can make changes or not
-* Adding account classication to each user such as Admin, Normal, and others for the reason above
+* Adding account classification to each user such as Admin, Normal, and others for the reason above
 * Adding more options to add other things to the accounts, like bank info, id numbers, etc.
