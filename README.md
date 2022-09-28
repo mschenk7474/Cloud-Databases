@@ -2,9 +2,13 @@
 
 {Important!  Do not say in this section that this is a college assignment.  Talk about what you are trying to accomplish as a software engineer to further your learning.}
 
-{Provide a description of the software that you wrote and how it integrates with a Cloud Database.  Describe how to use your program.}
+How the user database works is first, you run main, and then the user is prompted to input whether they have an account or not. If they do not have an account, they are prompted to create an account and then are redirected to input those new credentials to access the software. If the user already has an account and the user and data are present in the database, they are allowed to continue in the software.
 
-My purpose of writing this software was to gain a better understanding of how to use a cloud database, and how to connect it to somewhere where I can access the database and modify it the way I want. I also wrote this to get my feet wet with cloud programming to hopefully get into bigger cloud programming projects that involve AWS, Azure, and more.
+After the user is authorized, they are directed to a menu where the user can create a new account, show user information, modify account details, and delete accounts from the database. Whenever the user is done with the program, there is an option in the menu where the user can quit the program.
+
+Throughout the program, there is error checking to make sure all the inputs from the user are valid. The software checks the database to make sure that all data is either there or not, depending on whatever the situation needs in that moment.
+
+My purpose in writing this software was to gain a better understanding of how to use a cloud database, and how to connect it to somewhere where I can access the database and modify it the way I want. I also wrote this to get my feet wet with cloud programming to hopefully get into bigger cloud programming projects that involve AWS, Azure, and more.
 
 {Provide a link to your YouTube demonstration.  It should be a 4-5 minute demo of the software running, a walkthrough of the code, and a view of the cloud database.}
 
