@@ -172,7 +172,7 @@ class User():
         print()
 
         # asks for the account name to be shown back to the user
-        print("What account details would you like to see? ")
+        print("What account would you like to see? ")
         account_to_find = input("> ")
         print()
 
