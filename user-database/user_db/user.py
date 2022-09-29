@@ -50,6 +50,7 @@ class User():
         # also calls the prompt again to cycle through user input
         else:
             print("Invalid choice, please try again.")
+            print()
             ua.credentials_prompt()
             
 
@@ -97,6 +98,7 @@ class User():
         # error message with the recall to the prompt
         else:
             print("User is not in database, please try again.")
+            print()
             ua.credentials_prompt()
 
     def credentials_create(self):
