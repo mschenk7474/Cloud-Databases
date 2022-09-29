@@ -77,15 +77,22 @@ class User():
 
         # makes sure the user name and password are correct and are in the database
         # if it is, in that order, it continues. If one is wrong, it returns an error.
-        if ua.user_in_database(name, password) == True:
+        if ua.user_in_database(name) == True:
+            # checks to make sure the password is correct as well
+            if ua.password_in_database(name, password) == True:
 
-            # gets the correct reference, so that we can access the correct user's lists
-            self.creds = self.creds.child("Users").child(f"{name}").child(f"{password}")
+                # gets the correct reference, so that we can access the correct user's lists
+                self.creds = self.creds.child("Users").child(f"{name}").child(f"{password}")
 
-            # returns the ref to be used in the menu, but only off of the name since we want the
-            # password to be it's own entity of the 
-            self.creds = db.reference(f"/Users/{name}")
-            self.name = name
+                # returns the ref to be used in the menu, but only off of the name since we want the
+                # password to be it's own entity of the 
+                self.creds = db.reference(f"/Users/{name}")
+                self.name = name
+            # error message with the recall to the prompt
+            else:
+                print("Password is not correct for user, please try again.")
+                print()
+                ua.credentials_prompt()
 
         # error message with the recall to the prompt
         else:
@@ -116,30 +123,54 @@ class User():
 
         # checks to make sure the information that the use inputs isn't in the database already.
         # if it isn't, it continues on with creation of the new account. If it is, error is returned.
-        if ua.user_in_database(name, password) == False:
+        if ua.user_in_database(name) == False:
+            # checks to make sure the password is not in the account
+            if ua.password_in_database(name,password) == False:
 
-            # sets a new user up in the database
-            self.creds = self.creds.child(f"{name}").child("Password")
-            self.creds.child("Password").set(password)
-            self.creds.set(name)
-            self.creds.set(password)
+                # sets a new user up in the database
+                self.creds = self.creds.child(f"{name}").child("Password")
+                self.creds.child("Password").set(password)
+                self.creds.set(name)
+                self.creds.set(password)
 
-            # message so the user knows what is going on
-            print("Redirecting you to input the name and password you just created.")
-            print()
+                # message so the user knows what is going on
+                print("Redirecting you to input the name and password you just created.")
+                print()
 
-            # call to the input function so the ref is made right
-            ua.credentials_input()
+                # call to the input function so the ref is made right
+                ua.credentials_input()
+            # if password exists, error message is displayed with redirection to start of function
+            else:
+                print("Password already exists, please try again")
+                print()
+                ua.credentials_prompt()
 
         # error message with the recall to the prompt function
         else:
             print("User already exists, please try again")
+            print()
             ua.credentials_prompt()
 
 
-    def user_in_database(self, name, pswd):
+    def user_in_database(self, name):
         """
         This function will check to see if the user is in the database or not. The function
+        will return a True if the user and password match another user and a false if it doesn't.
+        """
+        # gets all of the data from the user and sets it as the reference
+        user_in_db = self.creds.get('/Users')
+        #Check to see if name is in database using enumerate to go through all the data
+        for x, y in enumerate(user_in_db):
+            # if name is in tuple created
+            if name in y:
+                return True
+            # if name isn't present, return falses
+            else:
+                return False
+
+    def password_in_database(self, name, pswd):
+        """
+        This function will check to see if the password is in the database or not. The function
         will return a True if the user and password match another user and a false if it doesn't.
         """
         # gets all of the data from the user and sets it as the reference
@@ -156,7 +187,7 @@ class User():
                     return False
             # if name isn't present, return falses
             else:
-                return False      
+                return False           
     
     def credentials_show(self):
         """
